@@ -17,6 +17,7 @@
     "electron-navigation": "^1.5.8",
     "electron-react-titlebar": "^0.8.1",
     "electron-titlebar-windows": "^3.0.0",
+    "growl": "^1.10.5",
     "react": "^16.8.2",
     "windows10-fluently-titlebar": "^3.1.2"
   },
