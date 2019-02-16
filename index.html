@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vaei's Helper Tools</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        tab-body {
+            background-color: #202225;
+            display: flex;
+            flex-direction: column;
+            width: 50px;
+            align-items: center;
+            z-index: 1;
+        }
+
+        #nav-body-tabs {
+            flex: 1;
+            width: 100%;
+            padding-left: 30px;
+            overflow-x:hidden;
+        }
+
+        #nav-body-views {
+            width: 100%;
+            overflow-x:hidden;
+        }
+
+        .nav-tabs-tab {
+            height: 50px !important;
+        }
+
+        ::-webkit-scrollbar { display: none; }
+    </style>
+    <!-- <link rel="stylesheet" type="text/css" href="material-dark.css"> -->
+</head>
+
+<body>
+    <tab-body>
+        <div id="nav-body-tabs"></div>
+    </tab-body>
+    <div id="nav-body-views"></div>
+    <!-- <script>
+    ReactDOM.render(
+            <TitleBar menu={menuTemplate} icon={iconPath}>
+                <link rel="stylesheet" type="text/css" href={require.resolve('electron-react-titlebar/assets/style.css')} />
+            </TitleBar>,
+            document.body
+        )
+    </script> -->
+    <script>
+        const enav = new (require('electron-navigation'))({
+            verticalTabs: true,
+            showUrlBar: false,
+            showAddTabButton: false,
+            closeableTabs: false
+        });
+        // enav.newTab('https://www.unrealengine.com/', {
+        //     close: enav.closeableTabs,
+        //     icon: "ue4.ico",
+        //     title: "",
+        //     readonlyUrl: true,
+        //     contextMenu: false
+        // });
+        // enav.newTab('https://www.youtube.com/', {
+        //     close: enav.closeableTabs,
+        //     icon: "yt.ico",
+        //     title: "",
+        //     readonlyUrl: true,
+        //     contextMenu: false
+        // });
+        enav.newTab(`file:///${__dirname}/about.html`, {
+            close: enav.closeableTabs,
+            icon: "yt.ico",
+            title: "",
+            readonlyUrl: true,
+            contextMenu: false
+        });
+    </script>
+</body>
+
+</html>

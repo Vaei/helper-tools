@@ -1,0 +1,26 @@
+{
+  "name": "helper-tools",
+  "version": "1.0.0",
+  "description": "Helper tools for UE4",
+  "main": "index.js",
+  "scripts": {
+    "test": "electron .",
+    "package-win": "electron-packager . helper-tools --overwrite --platform=win32 --arch=ia32 --icon=launcher.ico --prune=true --out=release-builds --version-string.CompanyName=Vaei --version-string.FileDescription=Vaei --version-string.ProductName=\"Helper Tools\""
+  },
+  "author": "Vaei (Jared Taylor)",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^6.9.1",
+    "defaultcss": "^1.1.1",
+    "domify": "^1.4.0",
+    "electron": "^4.0.5",
+    "electron-navigation": "^1.5.8",
+    "electron-react-titlebar": "^0.8.1",
+    "electron-titlebar-windows": "^3.0.0",
+    "react": "^16.8.2",
+    "windows10-fluently-titlebar": "^3.1.2"
+  },
+  "devDependencies": {
+    "electron-packager": "^13.0.1"
+  }
+}
